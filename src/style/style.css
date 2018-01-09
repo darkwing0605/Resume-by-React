@@ -1,0 +1,314 @@
+body,h2,h3,p{margin:0;padding:0;}
+h2,h3,button{font-size:100%;}
+a{text-decoration:none;color:blue;}
+a:hover{text-decoration:underline}
+body{background: #3acfff;}
+
+@keyframes loading{
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(.3);
+		opacity: .5;
+	}
+}
+@keyframes shine{
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: .2;
+	}
+}
+/* 
+ * loading
+ */
+.loading {
+	/*display: none;*/
+	position: absolute;
+	background: #3ad0ff;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+}
+.loading-list {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 100px;
+	height: 100px;
+	transform: translate(-50%, -50%);
+}
+.loading-list .point {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: lightgreen;
+	position: absolute;
+	animation: loading 1s infinite;
+}
+.loading-list .point:nth-child(1) {
+	left: 0;
+	top: 50%;
+	margin-top: -10px;
+	animation-delay: 0.125s;
+}
+.loading-list .point:nth-child(2) {
+	left: 11px;
+	top: 11px;
+	animation-delay: 0.25s;
+}
+.loading-list .point:nth-child(3) {
+	left: 50%;
+	top: 0;
+	margin-left: -10px;
+	animation-delay: 0.375s;
+}
+.loading-list .point:nth-child(4) {
+	top: 11px;
+	right: 11px;
+	animation-delay: 0.5s;
+}
+.loading-list .point:nth-child(5) {
+	right: 0;
+	top: 50%;
+	margin-top: -10px;
+	animation-delay: 0.625s;
+}
+.loading-list .point:nth-child(6) {
+	right: 11px;
+	bottom: 11px;
+	animation-delay: 0.75s;
+}
+.loading-list .point:nth-child(7) {
+	bottom: 0;
+	left: 50%;
+	margin-left: -10px;
+	animation-delay: 0.825s;
+}
+.loading-list .point:nth-child(8) {
+	bottom: 11px;
+	left: 11px;
+	animation-delay: 1s;
+}
+.loading-text {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: auto;
+	height: auto;
+	transform: translate(-50%, 60px);
+
+	color: #fff;
+	font-family: "Microsoft Yahei";
+	text-align: center;
+}
+/* 
+ * 首页简介
+ */
+.intro {
+	/*display: none;*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 450px;
+	z-index: 10;
+}
+.intro-title {
+	font-size: 30px;
+	margin-bottom: 20px;
+	padding: 5px 20px;
+	border: 3px solid #333;
+	background: #fff;
+}
+.intro-desc {
+	font-size: 18px;
+	margin-bottom: 20px;
+	padding: 5px 10px;
+	border: 3px solid #333;
+	background: #fff;
+	width: 70%;
+	margin: 20px auto;
+}
+.intro-btn {
+	border: none;
+	width: 130px;
+	height: 60px;
+	font-size: 18px;
+	border: 2px solid #333;
+	background: #fff;
+	color: #333;
+	margin-bottom: 20px
+}
+.intro-tip {
+	color: #f1f1f1;
+	font-size: 18px;
+	animation: shine 1s infinite;
+}
+/* 
+ * 简历主体
+ */
+.content {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.layer {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 20000px;
+	height: 100%;
+}
+.layer .ground {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url(../images/ground.png);
+}
+.layer .trees {
+	position: absolute;
+	bottom: 90px;
+	left: 0;
+	width: 100%;
+	height: 300px;
+	background: url(../images/trees.png);
+	background-size: auto 300px;
+}
+.layer .mountain {
+	position: absolute;
+	bottom: -100px;
+	left: -100px;
+	width: 100%;
+	height: 800px;
+	background: url(../images/mountain.png);
+	background-size: auto 800px;
+}
+.layer .cloud {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 200px;
+	background: url(../images/cloud.png);
+}
+.layer .block {
+	position: absolute;
+	bottom: 80px;
+	width: 300px;
+	height: 220px;
+	background: url(../images/pipe.png);
+}
+.layer .block1 {
+	left: 2000px;
+}
+.layer .block2 {
+	left: 6000px;
+	height: 130px;
+}
+.layer .block3 {
+	left: 10000px;
+	height: 200px;
+}
+.layer .block4 {
+	left: 13400px;
+	height: 270px;
+}
+.layer .block5 {
+	left: 17000px;
+	height: 382px;
+}
+
+.layer .project {
+	position: absolute;
+	top: 36%;
+	margin-top: -200px;
+	width: 500px;
+	height: 500px;
+	background: url(../images/project.png);
+	background-size: cover;
+	box-sizing: border-box;
+	padding: 55px 30px 0 20px;
+}
+.layer .project-title {
+	font-size: 30px;
+	text-align: center;
+}
+.layer .project-img {
+	position: absolute;
+	width: 300px;
+	height: 150px;
+	background: #ddd;
+	border: 1px solid #dfdfdf;
+	left: 100px;
+	top: 125px;
+}
+.layer .project-desc-content {
+	text-align: center;
+}
+.layer .project .project-desc-tech{
+	margin: 170px 0 0 50px;
+	float: left;
+}
+.layer .project .project-desc-preview{
+	margin: 162px 40px 0 0;
+	float: right;
+}
+.layer .project-0 {
+	left: 4000px;
+}
+.layer .project-1 {
+	left: 8500px;
+}
+.layer .project-2 {
+	left: 12300px;
+}
+.layer .project-3 {
+	left: 15800px;
+}
+.layer .ending {
+	top: 40%;
+	left: 18450px;
+	text-align: center;
+	padding-top: 20px;
+}
+.layer .ending .ending-btn {
+	border: none;
+	width: 350px;
+	height: 40px;
+	font-size: 24px;
+	border: 2px solid #333;
+	background: #fff;
+	color: #333;
+	margin-bottom: 15px;
+}
+/* 
+ * 主角 Me
+ */
+.people {
+	position: fixed;
+	width: 200px;
+	height: 200px;
+	left: 50px;
+	bottom: 70px;
+	overflow: hidden;
+}
+.people .me {
+	position: absolute;
+	width: 800px;
+	height: 400px;
+	left: 0;
+	top: 0;
+	background: url(../images/people.png) no-repeat;
+}
