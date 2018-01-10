@@ -341,6 +341,7 @@ class ProductDemo extends React.Component {
 					<a href="tel:15144304511"><button className="ending-btn">Tel: 15144304511</button></a><br/>
 					<a href="https://www.dark-wing.com/" target="_blank"><button className="ending-btn">Blog</button></a><br/>
 					<a href="https://github.com/darkwing0605" target="_blank"><button className="ending-btn">GitHub</button></a>
+					<a href="https://gitee.com/darkwing" target="_blank"><button className="ending-btn">码云</button></a>
 				</div>
 			</div>
 		)
